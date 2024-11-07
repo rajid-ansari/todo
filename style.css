@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    /* background-color: gray; */
+    font-family: "Gilroy";
+}
+
+header {
+    height: 20vh;
+    background-color: rgb(55, 47, 91);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h3 {
+    position: absolute;
+    top: 1vh;
+    left: 2vh;
+    color: #ddd;
+}
+
+.taskInput {
+    width: 40%;
+    height: 3rem;
+    padding: 10px 16px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+}
+
+.create-task-btn {
+    height: 3rem;
+    padding: 6px 16px;
+    font-size: 1.6rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    background-color: royalblue;
+    color: white;
+    cursor: pointer;
+}
+
+.create-task-btn:active {
+    background-color: rgba(65, 105, 225, 0.771);
+}
+
+.tasks {
+    min-height: 100vh;
+    background-color: #ddd;
+    padding: 5vh 0vh 0vh 15vw;
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: center; */
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.task {
+    min-width: 80%;
+    border: 1px solid gray;
+    padding: 7px 12px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#complete,
+#delete {
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#complete:active,
+#delete:active {
+    background-color: rgba(128, 128, 128, 0.865);
+    transition: all ease 0.2s;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    header {
+        height: 18vh;
+    }
+
+    .taskInput {
+        width: 73%;
+        height: 2.6rem;
+    }
+
+    .create-task-btn {
+        height: 2.6rem;
+        padding: 6px 8px;
+    }
+
+    .tasks {
+        padding: 2vh;
+    }
+
+    .task {
+        min-width: 100%;
+    }
+
+    #complete {
+        font-size: 1rem;
+    }
+}
